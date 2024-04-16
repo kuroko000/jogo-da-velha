@@ -9,7 +9,7 @@ def novoTabuleiro():
 def imprimirTabuleiro(tabuleiro):
     for indice, valor in enumerate(tabuleiro):
         if valor == 0:
-            print (" ", indice + 1, sep = "", end = '')
+            print (" ", indice+1,sep="",end='')
         elif valor == 1:
             print (" x", end = '')
         else:
@@ -21,23 +21,23 @@ def imprimirTabuleiro(tabuleiro):
             print(" |", end='')
     print("\n")
 
-    def recebeJogada(jogador):
+def recebeJogada(jogador):
         try:
-            jogado = int(input("Digite a posição a jogar 1-9 (jogador %s):"% jogador))
+            jogada = int(input("Digite a posição a jogar 1-9 (jogador %s):"% jogador))
             return jogada
         except ValueError:
             print("entrada invalida")
             return -1
         
+
 def posicaoValida (jogada, tabuleiro):
-    if jogada < 1 or jogada >9:
+    if jogada < 1 or jogada > 9:
         print ("Posição invalida")
         return False
     if tabuleiro[jogada - 1] != 0:
         print ("posição ocupada")
         return False
     return True
-
 
 def mudaJogador (jogador, jogada, tabuleiro):
     if jogador == "x":
@@ -125,6 +125,6 @@ jogadas = 0
 imprimirTabuleiro(tabuleiro)
 jogada = recebeJogada(jogador)
 posicaoValida(jogada, tabuleiro)
-jogador = mudaJogadoor(jogador, jogada, tabuleiro)
+jogador = mudaJogador(jogador, jogada, tabuleiro)
 jogadas += 1
 verificaFimDeJogo(jogadas, tabuleiro)
