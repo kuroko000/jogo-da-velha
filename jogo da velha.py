@@ -1,3 +1,6 @@
+from random import randint
+
+
 def novoTabuleiro():
     return [0,0,0,
             0,0,0,
