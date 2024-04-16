@@ -116,7 +116,7 @@ def verificaFimDeJogo(numJogadas, tabuleiro):
 ###################################################
 #IMPLEMENTAÇÃO
 
-tabuleiro = novoTabuleiro
+tabuleiro = novoTabuleiro()
 
 jogador = "x"
 jogadas = 0
