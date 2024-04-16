@@ -77,4 +77,51 @@ def verificaFimDeJogo(numJogadas, tabuleiro):
             print ("Jogador o ganhou")
             return 2
     if tabuleiro[1] == tabuleiro[4] == tabuleiro[7]:
-        if
+        if tabuleiro[1] == 1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro [1] == 2:
+            print("Jogador o ganhou")
+            return 2
+    if tabuleiro[2] == tabuleiro[5] == tabuleiro[8]:
+        if tabuleiro[2] == 1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro [2] == 2:
+            print("Jogador o ganhou")
+            return 2
+            #verificar diagonais
+    if tabuleiro [0] == tabuleiro [4] == tabuleiro [8]:
+        if tabuleiro[0] == 1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro[0] == 2:
+            print("Jogador o ganhou")
+            return 2
+    if tabuleiro [2] == tabuleiro[4] == tabuleiro[6]:
+        if tabuleiro[2] ==1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro[2] == 2:
+            print("jogador o ganhou")
+            return 2
+    if numJogadas >=9 :
+        print("Deu velha")
+        return -1
+    return 0
+
+###################################################
+#IMPLEMENTAÇÃO
+
+tabuleiro = novoTabuleiro
+
+jogador = "x"
+jogadas = 0
+
+
+imprimirTabuleiro(tabuleiro)
+jogada = recebeJogada(jogador)
+posicaoValida(jogada, tabuleiro)
+jogador = mudaJogadoor(jogador, jogada, tabuleiro)
+jogadas += 1
+verificaFimDeJogo(jogadas, tabuleiro)
