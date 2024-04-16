@@ -55,3 +55,26 @@ def verificaFimDeJogo(numJogadas, tabuleiro):
             print ("Jogador o ganhou")
             return
     if tabuleiro[3] == tabuleiro [4] == tabuleiro [5]:
+        if tabuleiro [3] == 1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro [3] == 2:
+            print ("Jogador o ganhou")
+            return 2
+    if tabuleiro [6] == tabuleiro[7] == tabuleiro[8]:
+        if tabuleiro[6] == 1:
+            print("Jogador x ganhou")
+            return 1
+        elif tabuleiro[6] == 2:
+            print("Jogador o ganhou")
+            return 2
+            #verificar colunas
+    if tabuleiro [0] == tabuleiro [3] == tabuleiro [6]:
+        if tabuleiro[0] == 1:
+            print("Jogador x ganhou")
+            return
+        elif tabuleiro[0] == 2:
+            print ("Jogador o ganhou")
+            return 2
+    if tabuleiro[1] == tabuleiro[4] == tabuleiro[7]:
+        if
