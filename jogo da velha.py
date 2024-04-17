@@ -102,7 +102,7 @@ def verificaFimDeJogo(numJogadas, tabuleiro):
             print("Jogador o ganhou")
             return 2
     if tabuleiro [2] == tabuleiro[4] == tabuleiro[6]:
-        if tabuleiro[2] ==1:
+        if tabuleiro[2] == 1:
             print("Jogador x ganhou")
             return 1
         elif tabuleiro[2] == 2:
@@ -121,10 +121,12 @@ tabuleiro = novoTabuleiro()
 jogador = "x"
 jogadas = 0
 
-
-imprimirTabuleiro(tabuleiro)
-jogada = recebeJogada(jogador)
-posicaoValida(jogada, tabuleiro)
-jogador = mudaJogador(jogador, jogada, tabuleiro)
-jogadas += 1
-verificaFimDeJogo(jogadas, tabuleiro)
+while True:
+    imprimirTabuleiro(tabuleiro)
+    jogada = recebeJogada(jogador)
+    if  not posicaoValida(jogada, tabuleiro):
+        continue
+    jogador = mudaJogador(jogador, jogada, tabuleiro)
+    jogadas += 1
+    if verificaFimDeJogo(jogadas, tabuleiro) != 0:
+        break
